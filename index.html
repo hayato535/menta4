@@ -1,1 +1,112 @@
-test1
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>課題１</title>
+  <!-- <link rel="stylesheet" href="main.js"> -->
+</head>
+<body>
+
+
+<script>
+  
+  'use strict';
+
+  // const numberList = ['0','1','2','3']
+
+
+
+  const todoList = [
+    {task: '机を片付ける', genre : '掃除'},
+    {task: '牛乳を買う', genre : '買い物'},
+    {task: '散歩する', genre : '運動'}
+  ];
+
+  function displayTask(){
+    console.log('========================');
+    console.log('現在持っているタスク一覧');
+    console.log('========================');
+
+      todoList.forEach((todo,index) =>{
+            console.log(`${index} :[内容]${todo.task} 、[ジャンル]${todo.genre}`);
+      });
+  }
+
+  displayTask();
+
+  const addTask = prompt('タスクを入力してください');
+  const addGenre = prompt('ジャンルを入力してください');
+
+  if(addTask){
+    if(addGenre){
+
+      todoList.push({task:addTask , genre:addGenre});
+
+      displayTask();
+
+    }
+  }
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+<!-- // 課題３
+// var array = ['掃除','買い物','散歩'];
+// function displayTask(){
+// console.log('========================');
+// console.log('現在持っているタスク一覧');
+// console.log('========================');
+// console.log('0 : ' + array[0]);
+// console.log('1 : ' + array[1]);
+// console.log('2 : ' + array[2]);
+// }
+// displayTask();
+// var task = window.prompt("タスクを入力してください");
+// if(task !== null){
+//   array.push(task);
+//   displayTask();
+//   console.log('3 : ' + array[3]);
+//   window.alert("新しいタスクを追加しました。");
+//   window.prompt("「確認,追加,削除,終了」の４つのいずれかを入力してください");
+// } -->
+
+
+
+
+
+
+<!-- 課題２ -->
+<!-- // do{
+//    var syuto = window.prompt("日本の首都は？");
+//    if(syuto === '東京'){
+//      window.alert('正解！');
+//    }else{
+//      window.alert('不正解！');
+//    }
+// }while(syuto != '東京') -->
+
+
+
+
+<!-- 課題１ -->
+<!-- // const sum = 2;
+// for(let i = 3; i <= 99; i ++){
+//   if(( i%15 === 0)){
+//     console.log(`FizzBuzz ${i}`)
+//   }else if((i%3 === 0)){
+//     console.log(`Fizz ${i}`)
+//   }else if( i%5 === 0){
+//     console.log(`Buzz ${i}`)
+//   }
+// } -->
